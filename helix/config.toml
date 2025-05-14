@@ -1,0 +1,36 @@
+theme = "custom-darcula-solid"
+
+[editor]
+completion-timeout = 0
+completion-trigger-len = 1
+line-number = "relative"
+mouse = true
+color-modes = true
+popup-border = "all"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+w = "move_next_sub_word_start"
+b = "move_prev_sub_word_start"
+X = "extend_line_above"
+"A-S-w" = [":primary-clipboard-yank", ":sh echo -n $(xclip -o) | wc -m"]
+"A-S-z" = [":primary-clipboard-yank", ":pipe python3 -c \"import math; print($(xclip -o))\""]
+
+[keys.select]
+w = "extend_next_sub_word_start"
+b = "extend_prev_sub_word_start"
+X = "extend_line_above"
+"A-S-w" = [":primary-clipboard-yank", ":sh echo -n $(xclip -o) | wc -m"]
+"A-S-z" = [":primary-clipboard-yank", ":pipe python3 -c \"import math; print($(xclip -o))\""]
+
+[keys.normal.space]
+W = ":write"
+q = ":quit"
+

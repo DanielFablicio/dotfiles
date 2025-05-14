@@ -1,0 +1,37 @@
+# Modified from darcula-solid-helix
+inherits = "darcula"
+
+"ui.background.separator" = { bg = "grey01" }
+"ui.menu.scroll" = { fg = "grey02", bg = "grey00" }
+"ui.popup" = { fg = "grey05", bg = "grey00" }
+"ui.window" = { bg = "grey00" }
+"ui.cursorline.secondary" = { bg = "grey03" }
+
+[palette]
+grey00 = "#101010"
+grey01 = "#000000"
+grey02 = "#323232"
+grey03 = "#555555"
+grey04 = "#a8a8a8"
+
+# Taken from the `darcula` theme for future edits
+
+# grey00 = "#181818" # Default Background
+# grey01 = "#282828" # Lighter Background (Used for status bars, line number and folding marks)
+# grey02 = "#383838" # Selection Background
+# grey03 = "#585858" # Comments, Invisibles, Line Highlighting
+# grey04 = "#b8b8b8" # Dark Foreground (Used for status bars)
+# grey05 = "#d8d8d8" # Default Foreground, Caret, Delimiters, Operators
+# grey06 = "#e8e8e8" # Light Foreground (Not often used)
+# grey07 = "#f8f8f8" # Light Background (Not often used)
+
+# white = "#d0d0d0"
+yellow = "#e0d041"
+# orange = "#cc7832"
+# darkred = "#a34a27"
+# purple = "#9876aa"
+# green = "#32cd32"
+# grey = "#808080"
+# darkgreen = "#629755"
+# lightblue = "#6897bb"
+# blue = "#104158"

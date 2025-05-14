@@ -1,0 +1,12 @@
+tabbox {
+  margin: -12px;
+  background-color: #000000;
+}
+
+tab {
+  background-color: #202020;
+}
+
+tab:selected {
+  background-color: #002500;
+}

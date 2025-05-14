@@ -1,0 +1,30 @@
+# Window
+window-width = 1920
+window-height = 1080
+window-decoration = none
+
+# Mouse
+copy-on-select = clipboard
+
+# Background
+background-opacity = 0.98
+
+# Font
+font-size = 14
+
+# Theme
+theme = "deep"
+
+# Misc
+term = xterm-256color
+
+# Notifications
+app-notifications = no-clipboard-copy
+
+# Keybinds
+config-file = ./keybinds
+
+# Tab configuration(GTK only)
+gtk-custom-css = tab-style.css
+gtk-tabs-location = bottom
+gtk-wide-tabs = false
