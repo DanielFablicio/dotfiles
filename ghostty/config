@@ -10,10 +10,10 @@ copy-on-select = clipboard
 background-opacity = 0.98
 
 # Font
-font-size = 14
+font-size = 15
 
 # Theme
-theme = "deep"
+theme = "Deep"
 
 # Misc
 term = xterm-256color
