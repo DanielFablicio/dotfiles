@@ -1,0 +1,62 @@
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "scls", "clangd" ]
+file-types = ["c", { glob = "*.h" }]
+
+[language-server.clangd]
+command = "clangd"
+args = [ "-header-insertion=never",
+         "--background-index",
+         "--clang-tidy",
+         "--completion-style=detailed",
+         "--function-arg-placeholders",
+         "--fallback-style=llvm" ]
+config = { usePlaceholders = true, completeUnimported = true, clangdFileStatus = true }
+
+[language-server.golangci-lint-lsp.config]
+command = ["golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false", "--issues-exit-code=1"]
+
+[language-server.texlab.config.texlab]
+auxDirectory = "build"
+chktex = {onOpenAndSave = true, onEdit = true}
+
+[language-server.texlab.config.texlab.build]
+onSave = true
+args = ["-auxdir=out", "-emulate-aux-dir"]
+
+# Config for simple-completion-language-server(snippets)
+
+# introduce new language server
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 100           # set max completion results len for each group: words, snippets, unicode-input
+feature_words = false                # enable completion by word
+feature_snippets = true              # enable snippets
+snippets_first = true                # completions will return before snippets by default
+snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false        # enable "unicode input"
+feature_paths = false                # enable path completion
+feature_citations = false            # enable citation completion (only on `citation` feature enabled)
+
+
+# write logs to /tmp/completion.log
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-language-server=info"
+LOG_FILE = "/tmp/completion.log"
+
+[[language]]
+name = "git-commit"
+language-servers = [ "scls" ]
+
+# introduce a new language to enable completion on any doc by forcing set language with :set-language stub
+[[language]]
+name = "stub"
+scope = "text.stub"
+file-types = []
+shebangs = []
+roots = []
+auto-format = false
+language-servers = [ "scls" ]
