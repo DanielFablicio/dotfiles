@@ -7,7 +7,7 @@ window-decoration = none
 copy-on-select = clipboard
 
 # Background
-background-opacity = 0.98
+background-opacity = 0.85
 
 # Font
 font-size = 15
