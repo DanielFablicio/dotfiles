@@ -21,14 +21,14 @@ w = "move_next_sub_word_start"
 b = "move_prev_sub_word_start"
 X = "extend_line_above"
 "A-S-w" = [":primary-clipboard-yank", ":sh echo -n $(xclip -o) | wc -m"]
-"A-S-z" = [":primary-clipboard-yank", ":pipe python3 -c \"import math; print($(xclip -o))\""]
+"A-S-z" = [":| python3 -c \"from math import *; print(eval(input()))\""]
 
 [keys.select]
 w = "extend_next_sub_word_start"
 b = "extend_prev_sub_word_start"
 X = "extend_line_above"
 "A-S-w" = [":primary-clipboard-yank", ":sh echo -n $(xclip -o) | wc -m"]
-"A-S-z" = [":primary-clipboard-yank", ":pipe python3 -c \"import math; print($(xclip -o))\""]
+"A-S-z" = [":| python3 -c \"from math import *; print(eval(input()))\""]
 
 [keys.normal.space]
 W = ":write"
